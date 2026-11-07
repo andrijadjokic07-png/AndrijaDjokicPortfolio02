@@ -1,0 +1,51 @@
+{
+    "work": [
+        {
+            "title": "Web developer",
+            "type": "Part time",
+            "place": "Self employed",
+            "location": "Stockholm",
+            "start": "2022-09",
+            "end": null
+        },
+        {
+            "title": "Manager",
+            "type": "Part time",
+            "place": "ICA",
+            "location": "New York",
+            "start": "2011-04",
+            "end": "2012-10"
+        },
+        {
+            "title": "Video Editor",
+            "type": "Internship",
+            "place": "NVIDIA",
+            "location": "Tokyo",
+            "start": "2017-11",
+            "end": "2020-03"
+        }
+    ],
+    "education": [
+        {
+            "title": "El & energy",
+            "type": "Full time",
+            "place": "NTI Gymnasium",
+            "start": "2023-08",
+            "end": "2026-06"
+        },
+        {
+            "title": "Digital Marketing",
+            "type": "Part time",
+            "place": "Moscow STI",
+            "start": "2020-08",
+            "end": "2023-06"
+        },
+        {
+            "title": "JavaScript Fullstack programer",
+            "type": "Full Time",
+            "place": "ChasAcademy",
+            "start": "2026-08",
+            "end": null
+        }
+    ]
+}
