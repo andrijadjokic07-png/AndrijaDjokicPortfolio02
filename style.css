@@ -21,6 +21,7 @@
     --bordercolor: #EBEAED;
     --badgebackground: #D7FFE0;
     --badgetext: #017A0D;
+    --errorcolor: #B00020;
     --shadowcolor: rgba(189, 189, 189, 0.7);
 }
 
@@ -40,6 +41,7 @@
     --bordercolor: #34344A;
     --badgebackground: #12351C;
     --badgetext: #8AE89A;
+    --errorcolor: #FF9AA8;
     --shadowcolor: rgba(0, 0, 0, 0.6);
 }
 
@@ -594,6 +596,27 @@ footer{
     }
 }
 
+.status{
+    margin-top: 1rem;
+}
+.statustext{
+    font-size: 1rem;
+    color: var(--textcolor);
+}
+.statuserror .statustext{
+    color: var(--errorcolor);
+}
+.retrybutton{
+    font-family: inherit;
+    font-size: 0.85rem;
+    color: var(--strongcolor);
+    background-color: var(--surface);
+    border: 2px solid var(--mutedcolor);
+    border-radius: 2rem;
+    padding: 0.3rem 1rem;
+    margin-top: 0.8rem;
+    cursor: pointer;
+}
 
 #themetoggle{
     position: absolute;

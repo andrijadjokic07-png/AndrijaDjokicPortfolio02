@@ -1,24 +1,26 @@
 import { loadCv } from '../api/cv.js';
+import { describeError } from '../api/http.js';
 import { renderEntries } from '../render/entries.js';
+import { clearStatus, showError, showInfo } from '../lib/status.js';
 
-const statusText = document.getElementById('cvstatus');
+const statusBox = document.getElementById('cvstatus');
 
 const init = async () => {
-    statusText.textContent = 'Loading CV…';
+    showInfo(statusBox, 'Loading CV…');
 
     try {
         const { work, education } = await loadCv();
 
         if (work.length === 0 && education.length === 0) {
-            statusText.textContent = 'There is no CV information to show yet.';
+            showInfo(statusBox, 'There is no CV information to show yet.');
             return;
         }
 
-        statusText.textContent = '';
+        clearStatus(statusBox);
         renderEntries(work, document.getElementById('worklist'));
         renderEntries(education, document.getElementById('educationlist'));
     } catch (error) {
-        statusText.textContent = 'Could not load the CV. Please try again later.';
+        showError(statusBox, describeError(error), init);
     }
 };
 

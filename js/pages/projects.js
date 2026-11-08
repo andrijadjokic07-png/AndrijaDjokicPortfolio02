@@ -1,10 +1,12 @@
 import { loadRepos } from '../api/github.js';
+import { describeError } from '../api/http.js';
 import { renderProjects } from '../render/projects.js';
 import { ALL, filterByLanguage, initFilter } from '../ui/filter.js';
+import { clearStatus, showError, showInfo } from '../lib/status.js';
 
 const USERNAME = 'andrijadjokic07-png';
 
-const statusText = document.getElementById('projectstatus');
+const statusBox = document.getElementById('projectstatus');
 const countText = document.getElementById('projectcount');
 const list = document.getElementById('projectlist');
 const filter = document.getElementById('projectfilter');
@@ -17,22 +19,22 @@ const showProjects = (repos, language) => {
 };
 
 const init = async () => {
-    statusText.textContent = 'Loading projects from GitHub…';
+    showInfo(statusBox, 'Loading projects from GitHub…');
     list.replaceChildren();
 
     try {
         const repos = await loadRepos(USERNAME);
 
         if (repos.length === 0) {
-            statusText.textContent = 'There are no public projects to show yet.';
+            showInfo(statusBox, 'There are no public projects to show yet.');
             return;
         }
 
-        statusText.textContent = '';
+        clearStatus(statusBox);
         showProjects(repos, ALL);
         initFilter(filter, repos, (language) => showProjects(repos, language));
     } catch (error) {
-        statusText.textContent = 'Could not load projects from GitHub. Please try again later.';
+        showError(statusBox, describeError(error), init);
     }
 };
 
