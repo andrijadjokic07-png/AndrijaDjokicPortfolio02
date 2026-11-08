@@ -234,7 +234,7 @@ main#homepage{
     padding-bottom: 6rem;
 }
 
-.fixedfooter {
+.fixedfooter, #TechStack + footer{
     position: fixed;
     bottom: 0;
     left: 0;
