@@ -30,26 +30,7 @@ const fillEntry = (template, { title, type, place, location, start, end }) => {
     return entry;
 };
 
-const renderEntries = (entries, container) => {
+export const renderEntries = (entries, container) => {
     const template = document.getElementById('entrytemplate');
     container.replaceChildren(...entries.map((entry) => fillEntry(template, entry)));
 };
-
-const loadCv = async () => {
-    try {
-        const response = await fetch('data/cv.json');
-
-        if (!response.ok) {
-            throw new Error(`HTTP ${response.status}`);
-        }
-
-        const { work, education } = await response.json();
-
-        renderEntries(work, document.getElementById('worklist'));
-        renderEntries(education, document.getElementById('educationlist'));
-    } catch (error) {
-        console.log('Something went wrong', error);
-    }
-};
-
-loadCv();

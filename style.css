@@ -4,23 +4,43 @@
 }
 
 :root{
-    --bluecolor: rgb(3, 148, 252);
-    --purplecolor: rgb(136, 3, 252);
-    --pinkcolor: rgb(252, 3, 219);
+    color-scheme: light;
+    --bluecolor: #0B6BCB;
+    --purplecolor: #8803FC;
+    --pinkcolor: #B800A0;
     --gradienthorizontal: linear-gradient(to right, var(--bluecolor), var(--purplecolor), var(--pinkcolor));
     --gradientvertical: linear-gradient(to bottom, var(--pinkcolor), var(--purplecolor), var(--bluecolor));
+    --pagebackground: #FFFFFF;
+    --surface: #FFFFFF;
+    --strongcolor: #000000;
     --darkbluecolor: rgb(35, 48, 167);
     --darkpurplecolor: #1E0E62;
     --headingcolor: #42446E;
     --textcolor: #666666;
-    --mutedcolor: #A7A7A7;
+    --mutedcolor: #6B6B6B;
     --bordercolor: #EBEAED;
     --badgebackground: #D7FFE0;
-    --badgetext: #018C0F;
-    --darkcolor: #222222;
-    --blackcolor: #000000;
-    --whitecolor: #FFFFFF;
+    --badgetext: #017A0D;
     --shadowcolor: rgba(189, 189, 189, 0.7);
+}
+
+:root.dark{
+    color-scheme: dark;
+    --bluecolor: #4DB3FF;
+    --purplecolor: #B07BFF;
+    --pinkcolor: #FF6BE6;
+    --pagebackground: #12121C;
+    --surface: #1E1E2E;
+    --strongcolor: #FFFFFF;
+    --darkbluecolor: #9DB0FF;
+    --darkpurplecolor: #C9B8FF;
+    --headingcolor: #E8E8F5;
+    --textcolor: #C4C4D0;
+    --mutedcolor: #A3A3B5;
+    --bordercolor: #34344A;
+    --badgebackground: #12351C;
+    --badgetext: #8AE89A;
+    --shadowcolor: rgba(0, 0, 0, 0.6);
 }
 
 body{
@@ -30,6 +50,8 @@ body{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background-color: var(--pagebackground);
+    color: var(--textcolor);
 }
 
 a:focus-visible, button:focus-visible{
@@ -95,7 +117,7 @@ header{
     #hamburger span{
         width: 100%;
         height: 2px;
-        background-color: var(--darkcolor);
+        background-color: var(--strongcolor);
         border-radius: 2px;
     }
     nav{
@@ -118,7 +140,7 @@ header{
     }
     #pagenav a{
         font-weight: 500;
-        color: var(--blackcolor);
+        color: var(--strongcolor);
     }
     #appnav{
         display: flex;
@@ -161,7 +183,7 @@ main{
         font-size: inherit;
         font-weight: 600;
         line-height: 1.25;
-        color: var(--darkcolor);
+        color: var(--strongcolor);
     }
     #whoami h1 span{
         display: block;
@@ -211,6 +233,7 @@ main#homepage{
     position: fixed;
     bottom: 0;
     left: 0;
+    background-color: var(--pagebackground);
 }
 
 footer{
@@ -250,7 +273,7 @@ footer{
         .aboutmetitle{
             font-size: 1.8rem;
             margin-bottom: 1rem;
-            color: var(--blackcolor);
+            color: var(--strongcolor);
         }
         .aboutmetext{
             font-size: 1rem;
@@ -347,7 +370,7 @@ footer{
     .aboutmetitle{
         font-size: 1.8rem;
         margin-bottom: 1rem;
-        color: var(--blackcolor);
+        color: var(--strongcolor);
     }
     .aboutmetext{
         font-size: 1rem;
@@ -393,7 +416,7 @@ footer{
     font-size: 1.8rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
-    color: var(--blackcolor);
+    color: var(--strongcolor);
     margin-left: 1.2rem;
 }
 .titleparagraph{
@@ -430,7 +453,7 @@ footer{
     .projectcontainer{
         width: 90%;
         height: auto;
-        background-color: var(--whitecolor);
+        background-color: var(--surface);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -449,7 +472,7 @@ footer{
     }
     .projectinfotitle{
         font-size: 1.2rem;
-        color: var(--blackcolor);
+        color: var(--strongcolor);
         margin-top: 1rem;
         overflow-wrap: anywhere;
     }
@@ -492,7 +515,7 @@ footer{
         margin-right: 0.6rem;
     }
     .icontext{
-        color: var(--blackcolor);
+        color: var(--strongcolor);
         text-decoration: underline;
         font-size: 15px;
     }
@@ -525,6 +548,33 @@ footer{
         font-size: 1.1rem;
         color: var(--textcolor);
     }
+}
+
+
+#themetoggle{
+    position: absolute;
+    top: 1.3rem;
+    right: 3.8rem;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0.7rem;
+    font-family: inherit;
+    font-size: 0.75rem;
+    color: var(--strongcolor);
+    background-color: var(--surface);
+    border: 1px solid var(--mutedcolor);
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+#themetoggle[aria-pressed="true"]{
+    background-color: var(--purplecolor);
+    color: var(--pagebackground);
+    border-color: var(--purplecolor);
+}
+
+:root.dark .projecticonimage{
+    filter: invert(1);
 }
 
 
@@ -642,6 +692,12 @@ footer{
             padding: 0.5rem;
         }
     }
+    #TechStack + footer, #projectpage + footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background-color: var(--pagebackground);
+    }
 
 
     #aboutmepage{
@@ -756,8 +812,8 @@ footer{
         margin-left: 15rem;
     }
 
-        #projectpage{
-        padding-bottom: 0;
+    #projectpage{
+        padding-bottom: 5rem;
 
         #projectstatus{
             margin-left: 15rem;
@@ -824,5 +880,10 @@ footer{
         #or{
             display: none;
         }
+    }
+
+    #themetoggle{
+        top: 1.5rem;
+        right: 1.5rem;
     }
 }

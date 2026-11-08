@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/theme-init.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +23,7 @@
             <span></span>
             <span></span>
         </button>
-
+        <button id="themetoggle" type="button" aria-pressed="false">Dark mode</button>
         <nav id="mainnav" aria-label="Main navigation">
             <ul id="pagenav">
                 <li><a href="index.html">Home</a></li>
@@ -65,6 +66,7 @@
 
         <section class="firstsectionaboutme">
             <h2 class="aboutmetitle">Work Experience</h2>
+            <p id="cvstatus" role="status"></p>
             <div id="worklist"></div>
         </section>
 
@@ -75,6 +77,7 @@
     </main>
 
     <footer>Designed and built by <span id="footername"> Andrija Djokic </span> with <span class="footersignature"> Love </span> &amp; <span class="footersignature"> Care </span> :D</footer>
-<script type="module" src="main.js"></script>
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/pages/about.js"></script>
 </body>
 </html>
