@@ -412,6 +412,12 @@ footer{
     flex-direction: column;
     padding-bottom: 2rem;
 
+    #projectstatus{
+        margin-left: 1.2rem;
+        margin-top: 1rem;
+        font-size: 1rem;
+        color: var(--textcolor);
+    }
     .projectpage{
         width: 100%;
         height: auto;
@@ -420,9 +426,6 @@ footer{
         justify-content: flex-start;
         align-items: flex-start;
         list-style: none;
-    }
-    #secondsecion{
-        margin-top: 0;
     }
     .projectcontainer{
         width: 90%;
@@ -436,13 +439,6 @@ footer{
         margin-top: 1.5rem;
         border-radius: 25px;
     }
-    .projectimage{
-        width: 100%;
-        height: 12rem;
-        object-fit: cover;
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-    }
     .projectinfo{
         width: 90%;
         height: auto;
@@ -455,6 +451,7 @@ footer{
         font-size: 1.2rem;
         color: var(--blackcolor);
         margin-top: 1rem;
+        overflow-wrap: anywhere;
     }
     .projectinfoparagraph{
         margin-top: 0.6rem;
@@ -476,17 +473,18 @@ footer{
         width: 100%;
         height: auto;
         display: flex;
+        justify-content: flex-start;
         margin-top: 1rem;
     }
 
     .linkone , .linktwo{
-        width: 50%;
+        width: auto;
         height: auto;
         display: flex;
         align-items: center;
     }
-    .linktwo{
-        justify-content: end;
+    .linkone{
+        margin-right: 1.5rem;
     }
     .projecticonimage{
         width: 15px;
@@ -758,65 +756,55 @@ footer{
         margin-left: 15rem;
     }
 
-    #projectpage{
+        #projectpage{
         padding-bottom: 0;
 
+        #projectstatus{
+            margin-left: 15rem;
+        }
         .projectpage{
             width: 100%;
-            height: 30rem;
+            height: auto;
             flex-direction: row;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: stretch;
         }
         .pagetitle{
             color: var(--headingcolor);
         }
-        #secondsecion{
-            margin-top: 2rem;
-        }
         .projectcontainer{
-            width: 20%;
-            height: 100%;
-            box-shadow: 2rem 1rem 10rem 2rem var(--shadowcolor);
-            margin-left: 3rem;
-            margin-top: 0;
-        }
-        .projectimage{
-            height: 45%;
-            object-fit: fill;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
+            width: 25%;
+            height: auto;
+            box-shadow: 1rem 1rem 3rem 0 var(--shadowcolor);
+            margin-left: 1.5rem;
+            margin-right: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
         }
         .projectinfo{
-            height: 65%;
-            align-items: center;
-            padding-bottom: 0;
+            height: auto;
+            align-items: flex-start;
+            padding-bottom: 1.5rem;
         }
         .projectinfotitle{
             font-size: 1.5rem;
         }
         .projectinfoparagraph{
             margin-top: 1rem;
-            width: 264px;
-            height: 130px;
+            width: 100%;
+            height: auto;
             font-size: 1rem;
         }
         .projectinfotechstack{
-            margin-top: 0.2rem;
+            margin-top: 0.6rem;
         }
         .linkcontainer{
-            height: 10%;
-            margin-top: 0.5rem;
-        }
-
-        .linkone , .linktwo{
-            height: 100%;
+            height: auto;
+            margin-top: 1rem;
         }
         .linkone{
-            justify-content: center;
-        }
-        .linktwo{
-            justify-content: flex-start;
+            margin-right: 2rem;
         }
     }
 

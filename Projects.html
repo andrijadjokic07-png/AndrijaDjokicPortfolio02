@@ -45,134 +45,31 @@
         <h1 class="pagetitle">Projects</h1>
         <p class="titleparagraph">Things I’ve built so far</p>
 
-        <ul class="projectpage">
-            <li class="projectcontainer">
-                <img class="projectimage" src="assets/project1.png" alt="Screenshot of project 1">
-                <div class="projectinfo">
-                    <h2 class="projectinfotitle">Project Title goes here</h2>
-                    <p class="projectinfoparagraph">
-                        This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content
-                    </p>
-                    <p class="projectinfotechstack">
-                        <span class="techstackbold">Tech stack</span> : HTML , JavaScript, SASS, React
-                    </p>
-                    <div class="linkcontainer">
-                        <div class="linkone">
-                            <img class="projecticonimage" src="assets/projectpageicon1.png" alt=""> <a href="#" aria-label="Live preview of project 1"><span class="icontext">Live preview</span></a>
-                        </div>
-                        <div class="linktwo">
-                            <img class="projecticonimage" src="assets/projectpageicon2.png" alt=""> <a href="#" aria-label="View code of project 1"><span class="icontext">View Code</span></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="projectcontainer">
-                <img class="projectimage" src="assets/project2.png" alt="Screenshot of project 2">
-                <div class="projectinfo">
-                    <h2 class="projectinfotitle">Project Title goes here</h2>
-                    <p class="projectinfoparagraph">
-                        This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content
-                    </p>
-                    <p class="projectinfotechstack">
-                        <span class="techstackbold">Tech stack</span> : HTML , JavaScript, SASS, React
-                    </p>
-                    <div class="linkcontainer">
-                        <div class="linkone">
-                            <img class="projecticonimage" src="assets/projectpageicon1.png" alt=""> <a href="#" aria-label="Live preview of project 2"><span class="icontext">Live preview</span></a>
-                        </div>
-                        <div class="linktwo">
-                            <img class="projecticonimage" src="assets/projectpageicon2.png" alt=""> <a href="#" aria-label="View code of project 2"><span class="icontext">View Code</span></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li class="projectcontainer">
-                <img class="projectimage" src="assets/project3.png" alt="Screenshot of project 3">
-                <div class="projectinfo">
-                    <h2 class="projectinfotitle">Project Title goes here</h2>
-                    <p class="projectinfoparagraph">
-                        This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content
-                    </p>
-                    <p class="projectinfotechstack">
-                        <span class="techstackbold">Tech stack</span> : HTML , JavaScript, SASS, React
-                    </p>
-                    <div class="linkcontainer">
-                        <div class="linkone">
-                            <img class="projecticonimage" src="assets/projectpageicon1.png" alt=""> <a href="#" aria-label="Live preview of project 3"><span class="icontext">Live preview</span></a>
-                        </div>
-                        <div class="linktwo">
-                            <img class="projecticonimage" src="assets/projectpageicon2.png" alt=""> <a href="#" aria-label="View code of project 3"><span class="icontext">View Code</span></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
+        <p id="projectstatus" role="status"></p>
+<ul class="projectpage" id="projectlist"></ul>
 
-        <ul id="secondsecion" class="projectpage">
-            <li class="projectcontainer">
-                <img class="projectimage" src="assets/project4.png" alt="Screenshot of project 4">
-                <div class="projectinfo">
-                    <h2 class="projectinfotitle">Project Title goes here</h2>
-                    <p class="projectinfoparagraph">
-                        This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content
-                    </p>
-                    <p class="projectinfotechstack">
-                        <span class="techstackbold">Tech stack</span> : HTML , JavaScript, SASS, React
-                    </p>
-                    <div class="linkcontainer">
-                        <div class="linkone">
-                            <img class="projecticonimage" src="assets/projectpageicon1.png" alt=""> <a href="#" aria-label="Live preview of project 4"><span class="icontext">Live preview</span></a>
-                        </div>
-                        <div class="linktwo">
-                            <img class="projecticonimage" src="assets/projectpageicon2.png" alt=""> <a href="#" aria-label="View code of project 4"><span class="icontext">View Code</span></a>
-                        </div>
-                    </div>
+<template id="projecttemplate">
+    <li class="projectcontainer">
+        <div class="projectinfo">
+            <h2 class="projectinfotitle"></h2>
+            <p class="projectinfoparagraph"></p>
+            <p class="projectinfotechstack">
+                <span class="techstackbold">Tech stack</span> : <span class="projectlanguage"></span>
+            </p>
+            <div class="linkcontainer">
+                <div class="linkone">
+                    <img class="projecticonimage" src="assets/projectpageicon1.png" alt=""> <a href="#" class="livelink"><span class="icontext">Live preview</span></a>
                 </div>
-            </li>
-            <li class="projectcontainer">
-                <img class="projectimage" src="assets/project5.png" alt="Screenshot of project 5">
-                <div class="projectinfo">
-                    <h2 class="projectinfotitle">Project Title goes here</h2>
-                    <p class="projectinfoparagraph">
-                        This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content
-                    </p>
-                    <p class="projectinfotechstack">
-                        <span class="techstackbold">Tech stack</span> : HTML , JavaScript, SASS, React
-                    </p>
-                    <div class="linkcontainer">
-                        <div class="linkone">
-                            <img class="projecticonimage" src="assets/projectpageicon1.png" alt=""> <a href="#" aria-label="Live preview of project 5"><span class="icontext">Live preview</span></a>
-                        </div>
-                        <div class="linktwo">
-                            <img class="projecticonimage" src="assets/projectpageicon2.png" alt=""> <a href="#" aria-label="View code of project 5"><span class="icontext">View Code</span></a>
-                        </div>
-                    </div>
+                <div class="linktwo">
+                    <img class="projecticonimage" src="assets/projectpageicon2.png" alt=""> <a href="#" class="codelink"><span class="icontext">View Code</span></a>
                 </div>
-            </li>
-            <li class="projectcontainer">
-                <img class="projectimage" src="assets/project6.png" alt="Screenshot of project 6">
-                <div class="projectinfo">
-                    <h2 class="projectinfotitle">Project Title goes here</h2>
-                    <p class="projectinfoparagraph">
-                        This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content
-                    </p>
-                    <p class="projectinfotechstack">
-                        <span class="techstackbold">Tech stack</span> : HTML , JavaScript, SASS, React
-                    </p>
-                    <div class="linkcontainer">
-                        <div class="linkone">
-                            <img class="projecticonimage" src="assets/projectpageicon1.png" alt=""> <a href="#" aria-label="Live preview of project 6"><span class="icontext">Live preview</span></a>
-                        </div>
-                        <div class="linktwo">
-                            <img class="projecticonimage" src="assets/projectpageicon2.png" alt=""> <a href="#" aria-label="View code of project 6"><span class="icontext">View Code</span></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
+            </div> 
+        </div>
+    </li>
+</template>
     </main>
 
     <footer>Designed and built by <span id="footername"> Andrija Djokic </span> with <span class="footersignature"> Love </span> &amp; <span class="footersignature"> Care </span> :D</footer>
-
+<script type="module" src="projects.js"></script>
 </body>
 </html>

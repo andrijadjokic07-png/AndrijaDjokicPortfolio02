@@ -40,8 +40,24 @@
             </div>
         </nav>
     </header>
-
-    <main id="aboutmepage">
+<template id="entrytemplate">
+    <article class="experiencesection">
+        <div class="experiencetitle">
+            <h3 class="experiencename"></h3>
+            <p class="experiencetype"></p>
+        </div>
+        <div class="experienceinfo">
+            <div class="experienceinfochild1">
+                <p class="experienceinfoheader"><img src="assets/Vector.png" alt="" class="icon"><span class="entryplace"></span></p>
+                <p class="experienceinfoheader entrylocationrow"><img src="assets/Vector-1.png" alt="" class="icon"><span class="entrylocation"></span></p>
+            </div>
+            <div class="experienceinfochild2">
+                <p class="experienceinfoheader"><img src="assets/Vector-2.png" alt="" class="icon"><time class="entrystart"></time> – <time class="entryend"></time></p>
+            </div>
+        </div>
+    </article>
+</template>
+        <main id="aboutmepage">
         <section class="firstsectionaboutme">
             <h1 class="aboutmetitle">About Me</h1>
             <p class="aboutmetext">The Generator App is an online tool that helps you to export ready-made templates ready to work as your future website. It helps you to combine slides, panels and other components and export it as a set of static files: HTML/CSS/JS.</p>
@@ -49,69 +65,12 @@
 
         <section class="firstsectionaboutme">
             <h2 class="aboutmetitle">Work Experience</h2>
-            <article class="experiencesection">
-                <div class="experiencetitle">
-                    <h3 class="experiencename">Junior Web Developer</h3>
-                    <p class="experiencetype">Full time</p>
-                </div>
-                <div class="experienceinfo">
-                    <div class="experienceinfochild1">
-                        <p class="experienceinfoheader"><img src="assets/Vector.png" alt="" class="icon">Dr. Rajkumar’s Learning App</p>
-                        <p class="experienceinfoheader"><img src="assets/Vector-1.png" alt="" class="icon">Bengaluru</p>
-                    </div>
-                    <div class="experienceinfochild2">
-                        <p class="experienceinfoheader"><img src="assets/Vector-2.png" alt="" class="icon"><time datetime="2021-09">Sep 2021</time> – <time datetime="2021-12">Dec 2021</time></p>
-                    </div>
-                </div>
-            </article>
-            <article class="experiencesection">
-                <div class="experiencetitle">
-                    <h3 class="experiencename">Web Development Intern</h3>
-                    <p class="experiencetype">Internship</p>
-                </div>
-                <div class="experienceinfo">
-                    <div class="experienceinfochild1">
-                        <p class="experienceinfoheader"><img src="assets/Vector.png" alt="" class="icon">IonPixelz Web Solutions</p>
-                        <p class="experienceinfoheader"><img src="assets/Vector-1.png" alt="" class="icon">Bengaluru</p>
-                    </div>
-                    <div class="experienceinfochild2">
-                        <p class="experienceinfoheader"><img src="assets/Vector-2.png" alt="" class="icon"><time datetime="2021-09">Sep 2021</time> – <time datetime="2021-12">Dec 2021</time></p>
-                    </div>
-                </div>
-            </article>
-            <article class="experiencesection">
-                <div class="experiencetitle">
-                    <h3 class="experiencename">SEO / SEM Specialist</h3>
-                    <p class="experiencetype">Internship</p>
-                </div>
-                <div class="experienceinfo">
-                    <div class="experienceinfochild1">
-                        <p class="experienceinfoheader"><img src="assets/Vector.png" alt="" class="icon">HAAPS</p>
-                        <p class="experienceinfoheader"><img src="assets/Vector-1.png" alt="" class="icon">Bengaluru</p>
-                    </div>
-                    <div class="experienceinfochild2">
-                        <p class="experienceinfoheader"><img src="assets/Vector-2.png" alt="" class="icon"><time datetime="2021-09">Sep 2021</time> – <time datetime="2021-12">Dec 2021</time></p>
-                    </div>
-                </div>
-            </article>
+            <div id="worklist"></div>
         </section>
 
         <section class="firstsectionaboutme">
             <h2 class="aboutmetitle">Education</h2>
-            <article class="experiencesection">
-                <div class="experiencetitle">
-                    <h3 class="experiencename">Bachelor in Electronics &amp; Communication</h3>
-                    <p class="experiencetype">Full time</p>
-                </div>
-                <div class="experienceinfo">
-                    <div class="experienceinfochild1">
-                        <p class="experienceinfoheader"><img src="assets/Vector.png" alt="" class="icon">Bangalore Institute of Technology</p>
-                    </div>
-                    <div class="experienceinfochild2">
-                        <p class="experienceinfoheader"><img src="assets/Vector-2.png" alt="" class="icon"><time datetime="2015-08">Aug 2015</time> – <time datetime="2020-12">Dec 2020</time></p>
-                    </div>
-                </div>
-            </article>
+            <div id="educationlist"></div>
         </section>
     </main>
 
