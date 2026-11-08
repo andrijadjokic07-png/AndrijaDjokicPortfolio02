@@ -129,6 +129,9 @@ header{
         align-items: center;
         margin-top: 0.3rem;
     }
+    nav.closed{
+        display: none;
+    }
     #pagenav{
         display: flex;
         flex-direction: column;
@@ -435,6 +438,47 @@ footer{
     flex-direction: column;
     padding-bottom: 2rem;
 
+        .projectfilter{
+        width: 90%;
+        margin-left: 1.2rem;
+        margin-top: 1.5rem;
+        border: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .projectfilter[hidden]{
+        display: none;
+    }
+    .projectfilter legend{
+        width: 100%;
+        font-size: 0.9rem;
+        color: var(--textcolor);
+        margin-bottom: 0.6rem;
+    }
+    .filterbutton{
+        font-family: inherit;
+        font-size: 0.85rem;
+        color: var(--strongcolor);
+        background-color: var(--surface);
+        border: 2px solid var(--mutedcolor);
+        border-radius: 2rem;
+        padding: 0.3rem 1rem;
+        margin-right: 0.6rem;
+        margin-bottom: 0.6rem;
+        cursor: pointer;
+    }
+    .filterbutton[aria-pressed="true"]{
+        background-color: var(--purplecolor);
+        border-color: var(--purplecolor);
+        color: var(--pagebackground);
+    }
+    #projectcount{
+        margin-left: 1.2rem;
+        margin-top: 0.5rem;
+        font-size: 0.85rem;
+        color: var(--textcolor);
+    }
     #projectstatus{
         margin-left: 1.2rem;
         margin-top: 1rem;
@@ -608,6 +652,9 @@ footer{
             flex-direction: row;
             margin-top: 0;
             margin-right: 5%;
+        }
+        nav.closed{
+            display: flex;
         }
         #pagenav{
             flex-direction: row;
@@ -812,9 +859,16 @@ footer{
         margin-left: 15rem;
     }
 
-    #projectpage{
+        #projectpage{
         padding-bottom: 5rem;
 
+        .projectfilter{
+            width: 70%;
+            margin-left: 15rem;
+        }
+        #projectcount{
+            margin-left: 15rem;
+        }
         #projectstatus{
             margin-left: 15rem;
         }

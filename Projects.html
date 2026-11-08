@@ -18,7 +18,7 @@
             <p class="logosubtitle">AndrijaDj</p>
         </div>
 
-        <button id="hamburger" type="button" aria-label="Toggle menu">
+        <button id="hamburger" type="button" aria-label="Toggle menu" aria-controls="mainnav" aria-expanded="true">
             <span></span>
             <span></span>
             <span></span>
@@ -45,7 +45,10 @@
     <main id="projectpage">
         <h1 class="pagetitle">Projects</h1>
         <p class="titleparagraph">Things I’ve built so far</p>
-
+                <fieldset class="projectfilter" id="projectfilter" hidden>
+            <legend>Filter by language</legend>
+        </fieldset>
+        <p id="projectcount" role="status"></p>
         <p id="projectstatus" role="status"></p>
 <ul class="projectpage" id="projectlist"></ul>
 
